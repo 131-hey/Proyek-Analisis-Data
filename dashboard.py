@@ -108,6 +108,7 @@ with tab2:
     #Mulai melakukan cleaning pada data berdasarkan hasil analisis tadi
     st.header("Cleaning Data")
     #Mengubah tipe data pada kolom 'dteday' yang semula object menjadi datetime
+    datetime_columns = ["dteday"]
     for column in datetime_columns:
      hour_df[column]= pd.to_datetime(hour_df[column])
     #Menampilkan info terkini dari data yang sudah melalui proses cleaning
