@@ -21,8 +21,7 @@ with tab1:
 
     #Menampilkan info dari data 'day'
     st.subheader('Info Data')
-    day = pd.DataFrame(day_df)
-    st.dataframe(day)
+    st.dataframe(day_df.dtypes)
     #Menganalisis apakah ada missing value pada data tersebut
     st.subheader('Missing Value')
     null_values = day_df.isnull().sum()
@@ -37,7 +36,7 @@ with tab1:
     #Mengubah tipe data pada kolom 'dteday' yang semula object menjadi datetime
     st.write(pd.to_datetime(day_df['dteday']))
     #Menampilkan info terkini dari data yang sudah melalui proses cleaning
-    st.write(day_df.info())
+    st.dataframe(day_df.dtypes)
     st.caption('Tipe data untuk kolom dteday yang semula object berhasil diganti dengan tipe data datetime')
 
     #Mulai melakukan tahap exploratory pada data
@@ -94,7 +93,7 @@ with tab2:
 
     #Menampilkan info dari data 'hour'
     st.subheader('Info Data')
-    st.write(hour_df.info())
+    st.dataframe(day_df.dtypes)
     #Menganalisis apakah ada missing value pada data tersebut
     st.subheader('Missing Value')
     null_values = hour_df.isna().sum()
@@ -109,7 +108,7 @@ with tab2:
     #Mengubah tipe data pada kolom 'dteday' yang semula object menjadi datetime
     st.write(pd.to_datetime(hour_df['dteday']))
     #Menampilkan info terkini dari data yang sudah melalui proses cleaning
-    st.write(hour_df.info())
+    st.dataframe(day_df.dtypes)
     st.caption('Tipe data untuk kolom dteday yang semula object berhasil diganti dengan tipe data datetime')
 
     #Mulai melakukan tahap exploratory pada data
