@@ -16,7 +16,7 @@ streamlit run dashboard.py
 ```
 Jika Anda mengganti nama berkas dashboard ini, maka ganti `dashboard.py` dengan nama dokumen Anda.
 
-Atau anda bisa membukanya dengan link : http://localhost:8501.
+Atau anda bisa membukanya dengan link : (https://wiasupmfsizvxwi5sojmqj.streamlit.app/)
 
 Kontak
 Nama: Khansaa Adhelia Kurnia Safitri
