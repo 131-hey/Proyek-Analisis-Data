@@ -34,7 +34,8 @@ with tab1:
     #Mulai melakukan cleaning pada data berdasarkan hasil analisis tadi
     st.header("Cleaning Data")
     #Mengubah tipe data pada kolom 'dteday' yang semula object menjadi datetime
-    st.write(pd.to_datetime(day_df['dteday']))
+    for column in datetime_columns:
+     day_df[column]= pd.to_datetime(day_df[column])
     #Menampilkan info terkini dari data yang sudah melalui proses cleaning
     st.dataframe(day_df.dtypes)
     st.caption('Tipe data untuk kolom dteday yang semula object berhasil diganti dengan tipe data datetime')
@@ -106,9 +107,10 @@ with tab2:
     #Mulai melakukan cleaning pada data berdasarkan hasil analisis tadi
     st.header("Cleaning Data")
     #Mengubah tipe data pada kolom 'dteday' yang semula object menjadi datetime
-    st.write(pd.to_datetime(hour_df['dteday']))
+    for column in datetime_columns:
+     hour_df[column]= pd.to_datetime(hour_df[column])
     #Menampilkan info terkini dari data yang sudah melalui proses cleaning
-    st.dataframe(day_df.dtypes)
+    st.dataframe(hour_df.dtypes)
     st.caption('Tipe data untuk kolom dteday yang semula object berhasil diganti dengan tipe data datetime')
 
     #Mulai melakukan tahap exploratory pada data
