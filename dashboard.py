@@ -21,7 +21,8 @@ with tab1:
 
     #Menampilkan info dari data 'day'
     st.subheader('Info Data')
-    st.dataframe(day_df.info())
+    day = pd.DataFrame(day_df)
+    st.dataframe(day)
     #Menganalisis apakah ada missing value pada data tersebut
     st.subheader('Missing Value')
     null_values = day_df.isnull().sum()
